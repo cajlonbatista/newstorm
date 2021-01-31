@@ -3,21 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "description": "A dashboard for managing Newstorm",
+  "author": {
+    "email": "cajlonbatista@acad.ifma.edu.br",
+    "name": "Francisco Cajlon"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "electron:build": "vue-cli-service electron:build",
+    "electron:serve": "vue-cli-service electron:serve",
+    "postinstall": "electron-builder install-app-deps",
+    "postuninstall": "electron-builder install-app-deps"
   },
-  "build": {
-    "appId": "cajlonbatista.624826",
-    "mac": {
-      "category": "dashboard.app.register.type"
-    },
-    "files": [
-      "dist/**/*",
-      "node_modules/**/*"
-    ]
-  },
+  "main": "background.js",
   "dependencies": {
     "axios": "^0.21.1",
     "babel-runtime": "^6.26.0",
@@ -42,16 +41,13 @@
     "deepmerge": "^4.2.2",
     "electron": "^11.2.1",
     "electron-builder": "^22.9.1",
+    "electron-devtools-installer": "^3.1.0",
     "eslint": "^7.18.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-vue": "^7.5.0",
+    "vue-cli-plugin-electron-builder": "~2.0.0-rc.5",
     "vue-template-compiler": "^2.6.11"
-  },
-  "main": "dist/electron.js",
-  "author": {
-    "email": "cajlonbatista@acad.ifma.edu.br",
-    "name": "Francisco Cajlon"
   },
   "eslintConfig": {
     "root": true,
@@ -71,5 +67,15 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "build": {
+    "appId": "cajlonbatista.624826",
+    "mac": {
+      "category": "dashboard.app.register.type"
+    },
+    "files": [
+      "dist/**/*",
+      "node_modules/**/*"
+    ]
+  }
 }
