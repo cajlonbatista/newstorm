@@ -3,6 +3,8 @@
     <main v-if="loading === false">
       <section v-for="article in articles" v-bind:key="article._id">
         <h1>{{ article.title }}</h1>
+        <p>{{ article.description }}</p>
+        <button>COPY</button>
       </section>
     </main>
     <article v-else>
