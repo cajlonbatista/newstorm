@@ -7,7 +7,7 @@ import Header from '../components/Header/Header';
 import GlobalStyles from '../global/global';
 import Routes from '../routes/routes';
 
-import pallete from '../themes/pallete';
+import pallete from '../global/themes/pallete';
 import AppStyles from './styles';
 
 function App() {

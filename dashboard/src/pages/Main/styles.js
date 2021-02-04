@@ -8,19 +8,21 @@ export const MainContainer = styled.main`
   background: ${props => props.theme.main};
   border-radius: 50px 0px 0px 50px;
   padding: 50px;
-  header{
-    
-  }
 `;
 
 export const Search = styled.header`
   width: 100%;
   display: flex;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
+  h1{
+    font-family: Nunito, sans-serif;
+    color: #9CA6CA;
+  }
   div{
     width: 100%;
     max-width: 400px;
-    min-height: 40px;
+    height: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;

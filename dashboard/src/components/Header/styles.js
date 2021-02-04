@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { jello } from '../../global/animations/animations';
+
 export const HeaderContainer = styled.header`
   width: 100%;
   height: 100vh;
@@ -23,6 +25,11 @@ export const HeaderContainer = styled.header`
       justify-content: center;
       border-radius: 2px;
       align-items: center;
+      :hover{
+        svg{
+          animation: ${jello} 0.5s linear;
+        }
+      }
       svg{
         width: 27px;
       }
