@@ -1,22 +1,15 @@
-import VueRouter from "vue-router";
+import React from 'react';
 
-const routes = [
-  {
-    path: '/',
-    name: 'Main',
-    component: () => import('../pages/Main/Main.vue'),
-  },
-  {
-    path: '/register',
-    name: 'Register',
-    component: () => import('../pages/Register/Register.vue'),
-  }
-];
+import { Route, Switch } from 'react-router-dom';
 
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes,
-});
+import Main from '../pages/Main/Main';
 
-export default router;
+const Routes = () => {
+  return (
+    <Switch>
+      <Route path="/" exact component={Main} ></Route>
+    </Switch>
+  );
+};
+
+export default Routes;

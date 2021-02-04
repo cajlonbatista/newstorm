@@ -2,84 +2,45 @@
   "name": "dashboard",
   "version": "0.1.0",
   "private": true,
-  "description": "A dashboard for managing Newstorm",
-  "author": {
-    "email": "cajlonbatista@acad.ifma.edu.br",
-    "name": "Francisco Cajlon"
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "axios": "^0.21.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.2",
+    "styled-components": "^5.2.1",
+    "svg-inline-react": "^3.2.0",
+    "swr": "^0.4.1",
+    "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "electron:build": "vue-cli-service electron:build",
-    "electron:serve": "vue-cli-service electron:serve",
-    "postinstall": "electron-builder install-app-deps",
-    "postuninstall": "electron-builder install-app-deps"
-  },
-  "main": "background.js",
-  "dependencies": {
-    "axios": "^0.21.1",
-    "babel-runtime": "^6.26.0",
-    "concurrently": "^5.3.0",
-    "core-js": "^3.6.5",
-    "custom-electron-titlebar": "^3.2.6",
-    "electron-is-dev": "^1.2.0",
-    "sass": "^1.32.5",
-    "sass-loader": "^10.1.1",
-    "swr": "^0.4.1",
-    "vue": "^2.6.11",
-    "vue-markdown": "^2.2.4",
-    "vue-router": "^3.5.1",
-    "vue-styled-components": "^1.6.0",
-    "vuesax": "^3.12.2",
-    "wait-on": "^5.2.1"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "babel-eslint": "^10.1.0",
-    "deepmerge": "^4.2.2",
-    "electron": "^11.2.1",
-    "electron-builder": "^22.9.1",
-    "electron-devtools-installer": "^3.1.0",
-    "eslint": "^7.18.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-vue": "^7.5.0",
-    "vue-cli-plugin-electron-builder": "~2.0.0-rc.5",
-    "vue-template-compiler": "^2.6.11"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
     "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
-    "rules": {}
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ],
-  "build": {
-    "appId": "cajlonbatista.624826",
-    "mac": {
-      "category": "dashboard.app.register.type"
-    },
-    "win": {
-      "icon": "./assets/img/dashboard.png"
-    },
-    "files": [
-      "dist/**/*",
-      "node_modules/**/*"
+      "react-app",
+      "react-app/jest"
     ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "babel-plugin-inline-react-svg": "^1.1.2"
   }
 }

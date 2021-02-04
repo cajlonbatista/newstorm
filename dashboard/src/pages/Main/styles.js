@@ -1,71 +1,54 @@
-import styled from 'vue-styled-components';
+import styled from 'styled-components';
 
 export const MainContainer = styled.main`
   width: 100%;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
-  background-color: #18191C;
-  padding: 10px 20px;
-  animation: bounced 0.3s linear;
-  >article{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  background: ${props => props.theme.main};
+  border-radius: 50px 0px 0px 50px;
+  padding: 50px;
+  header{
+    
   }
-  main{
-    display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(300px, 1fr));
-    grid-gap: 20px;
-  }
-  main section{
+`;
+
+export const Search = styled.header`
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  div{
     width: 100%;
-    background-color: #1E2023;
-    padding: 20px;
+    max-width: 400px;
+    min-height: 40px;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    h1{
-      font-family: Inter, sans-serif;
-      color: #F4F4F4;
-      margin-bottom: 24px;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
-      width: 80%;
+    align-items: center;
+    position: relative;
+    svg{
+      position: absolute;
+      top: 11px;
+      left: 15px;
+      width: 17px;
+      height: 17px;
+      stroke: #9CA6CA;
     }
-    p{
-      font-family: Nunito, sans-serif;
-      color: #B5B5B5;
-      margin-bottom: 20px;
-    }
-    button{
+    input{
       width: 100%;
-      max-width: 240px;
-      display: block;
-      margin: 5px auto;
+      height: 100%;
+      background: #FFF;
       border: 2px solid transparent;
-      color: #F4F4F4;
-      background: #11A36C;
-      padding: 10px 20px;
-      border-radius: 5px;
-      transition: all 0.3s;
-      font-family: Inter, sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 0.6px;
-      font-weight: 600;
       outline: none;
-      cursor: pointer;
-      :hover{
-        background: #14BD7C;
-        color: #FFFFF0;
-      }
+      padding: 0px 40px;
+      font-family: Inter, sans-serif;
+      border-radius: 10px;
+      transition: all 0.3s;
       :focus{
-        border-color: #FFFFF0;
+        border-color: #9CA6CA;
       }
+    }
+    input:focus + svg{
+      fill: #F1554C;
     }
   }
 `;
