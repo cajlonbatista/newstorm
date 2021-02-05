@@ -14,8 +14,12 @@ export const HeaderContainer = styled.header`
     display: flex;
     justify-content: center;
     padding-top: 50px;
+    svg{
+      border-radius: 20px;
+    }
   }
   div{
+    padding-top: 100px;
     a{
       margin: 20px auto;
       width: 100%;

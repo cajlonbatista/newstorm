@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-import { Link, useLocation } from 'react-router-dom';
+import { Link, Redirect, useLocation } from 'react-router-dom';
 import Inline from 'svg-inline-react';
 
 import { HeaderContainer } from './styles';
@@ -25,12 +25,13 @@ const menu = [
 
 const Header = () => {
   const location = useLocation();
-
+  useEffect(() => {
+    return (
+      <Redirect to='/' />
+    )
+  }, []);
   return (
-    <HeaderContainer>
-      <Link to='/'>
-        <Inline src={logo} />
-      </Link>
+    <HeaderContainer>    
       <div>
         {
           menu.map(item => (

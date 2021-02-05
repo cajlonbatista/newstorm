@@ -4,7 +4,9 @@
   "private": true,
   "main": "public/electron.js",
   "homepage": "./",
+  "description": "Dashboard for Storm News",
   "dependencies": {
+    "@craco/craco": "^6.1.0",
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
     "@szhsin/react-menu": "^1.5.0",
@@ -25,11 +27,11 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts  start",
+    "start": "craco  start",
     "dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
-    "build": "react-scripts  build",
-    "test": "react-scripts  test",
-    "eject": "react-scripts  eject",
+    "build": "craco  build",
+    "test": "craco  test",
+    "eject": "craco  eject",
     "postinstall": "electron-builder install-app-deps",
     "preelectron-pack": "yarn build",
     "electron-pack": "build -mw"
@@ -44,7 +46,13 @@
     "productName": "Newstorm Panel",
     "copyright": "Copyright © 2021 ${author}",
     "mac": {
-      "category": "public.dashboard.in"
+      "icon": "./public/favicon.ico"
+    },
+    "linux": {
+      "icon": "./public/favicon.ico"
+    },
+    "win": {
+      "icon": "./public/favicon.ico"
     },
     "files": [
       "build/**/*",
@@ -53,12 +61,6 @@
     "directories": {
       "buildResources": "assets"
     }
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [

@@ -25,6 +25,7 @@
       "arrow-parens": "off",
       "jsx-quotes": "off",
       "no-shadow": "off",
+      "react/style-prop-object": "off",
       "import/prefer-default-export": "off",
       "import/no-named-as-default": "off",
       "quote-props": "off",

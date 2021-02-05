@@ -8,6 +8,9 @@ export const MainContainer = styled.main`
   background: ${props => props.theme.main};
   border-radius: 50px 0px 0px 50px;
   padding: 50px;
+  -webkit-user-select: none;
+  -webkit-app-region: no-drag;
+  -webkit-user-drag: none;
 `;
 
 export const Search = styled.header`

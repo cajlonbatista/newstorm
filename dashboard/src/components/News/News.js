@@ -76,7 +76,7 @@ const News = ({ article }) => {
                     Delete
                   </MenuItem>
                   </Menu>
-                  <img src={article.cap} alt={article.title} />
+                  <article style={{ background: `url(${article.cap})`}}></article>
                   <Dialog open={anchorDelete} fullScreen={fullScreen} onClose={offDeleteDialog} style={{ borderRadius: 10 }}>
                     <ViewCard>
                       <header>
@@ -104,7 +104,7 @@ const News = ({ article }) => {
                     Delete
                   </MenuItem>
                   </Menu>
-                  <img src={article.cap} alt={article.title} />
+                  <article style={{ background: `url(${article.cap})` }}></article>
                   <Dialog open={anchorDelete} fullScreen={fullScreen} onClose={offDeleteDialog} style={{ borderRadius: 10 }}>
                     <ViewCard>
                       <header>
@@ -136,7 +136,7 @@ const News = ({ article }) => {
                     Delete
                   </MenuItem>
                   </Menu>
-                  <img src={article.cap} alt={article.title} />
+                  <article style={{ background: `url(${article.cap})` }}></article>
                   <Dialog open={anchorDelete} fullScreen={fullScreen} onClose={offDeleteDialog} style={{ borderRadius: 10 }}>
                     <ViewCard>
                       <header>
@@ -164,7 +164,7 @@ const News = ({ article }) => {
                     Delete
                   </MenuItem>
                   </Menu>
-                  <img src={article.cap} alt={article.title} />
+                  <article style={{ background: `url(${article.cap})` }}></article>
                   <Dialog open={anchorDelete} fullScreen={fullScreen} onClose={offDeleteDialog} style={{ borderRadius: 10 }}>
                     <ViewCard>
                       <header>

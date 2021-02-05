@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
 import Header from '../components/Header/Header';
+import TitleBar from '../components/TitleBar/TitleBar';
 import GlobalStyles from '../global/global';
 import Routes from '../routes/routes';
 
@@ -15,9 +16,12 @@ function App() {
     <BrowserRouter>
       <ThemeProvider theme={pallete}>
         <AppStyles>
-          <GlobalStyles />
-          <Header />
-          <Routes />
+          <TitleBar />
+          <main>
+            <GlobalStyles />
+            <Header />
+            <Routes />
+          </main>
         </AppStyles>
       </ThemeProvider>
     </BrowserRouter>
