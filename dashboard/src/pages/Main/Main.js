@@ -4,37 +4,49 @@ import { CircleLoading } from 'react-loadingg';
 import Inline from 'svg-inline-react';
 import axios from 'axios';
 
-import LastNews from '../../components/News/News';
+import News from '../../components/News/News';
 
 import { MainContainer, Search } from './styles';
 
 import searchicon from '../../assets/svgs/search';
+import ViewError from '../../components/ViewError/ViewError';
 
 const Main = () => {
   const [search, setSearch] = useState('');
   const [result, setResult] = useState([]);
   const [loading, setLoading] = useState(false);
-  const onSearch = () => {
+
+  const onSearch = (e) => {
+    e.preventDefault();
     setLoading(true);
     axios.get(`${process.env.REACT_APP_URL}api/search?tag=${search}`)
       .then(res => {
         setLoading(false);
-        console.log(res.data.docs);
         setResult(res.data);
-      }).catch(err => console.log(err));
+      }).catch(err => {
+        setLoading(false);
+        return (
+          <MainContainer>
+            <Search>
+              <form onSubmit={onSearch}>
+                <input placeholder='Find a news' value={search} onChange={e => setSearch(e.target.value)} />
+                <Inline src={searchicon} />
+              </form>
+              <div></div>
+            </Search>
+            <ViewError />
+          </MainContainer>
+        )
+      });
   };
 
   return (
     <MainContainer>
       <Search>
-        <div>
-          <input placeholder='Find a news' value={search} onChange={e => setSearch(e.target.value)} onKeyDown={e => {
-            if (e.keyCode === 13) {
-              onSearch();
-            }
-          }} />
+        <form onSubmit={onSearch}>
+          <input placeholder='Find a news' value={search} onChange={e => setSearch(e.target.value)} />
           <Inline src={searchicon} />
-        </div>
+        </form>
         <div></div>
       </Search>
       {
@@ -42,9 +54,9 @@ const Main = () => {
           ?
           (result === undefined || result.length === 0)
             ?
-            <LastNews />
+            <News />
             :
-            <></>
+            <News article={result} />
           :
           <CircleLoading />
       }

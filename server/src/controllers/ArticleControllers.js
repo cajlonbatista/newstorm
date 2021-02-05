@@ -12,6 +12,15 @@ module.exports = {
     async search(req, res) {
         var { tag } = req.query;
         var cache = [];
+        var validate = "";
+        for (const word of tag) {
+            if (word !== "" || word !== " ") {
+                validate += word;
+            }
+        }
+        if (validate === "") {
+            return res.status(401).json({ message: "No content tag" });
+        }
         const articles = await Article.find();
         for (const article of articles) {
             if (article.title.toLowerCase().search(tag.toLowerCase()) !== -1) {

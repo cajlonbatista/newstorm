@@ -1,6 +1,6 @@
 const pallete = {
-  background: '#E9ECF5',
-  main: '#F3F5FB',
+  background: '#232228',
+  main: '#313139',
 };
 
 export default pallete;

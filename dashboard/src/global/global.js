@@ -11,6 +11,11 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${props => props.theme.background};
     overflow: hidden;
   }
+  .MuiDialog-container >div{
+    border-radius: 10px;
+    overflow: hidden;
+    background: #313139;
+  }
 `;
 
 export default GlobalStyle;

@@ -40,9 +40,15 @@ export const HeaderContainer = styled.header`
     display: flex;
     justify-content: center;
     padding-bottom: 50px;
+    :hover{
+      svg{ 
+        stroke: #e24c4b;
+      }
+    }
     svg{
       width: 27px;
       stroke: #9CA6CA;
+      transition: all 0.3s;
     }
   }
 `;

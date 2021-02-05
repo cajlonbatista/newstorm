@@ -37,8 +37,8 @@ const Header = () => {
             (location.pathname === item.path)
               ?
               <Link key={item.path} to={item.path} style={{
-                borderColor: '#F1554C',
-                backgroundColor: '#F3F5FB'
+                borderColor: '#20BFA9',
+                backgroundColor: '#313139'
               }}>
                 <Inline src={item.iconActive} />
               </Link>
@@ -49,7 +49,7 @@ const Header = () => {
           ))
         }
       </div>
-      <Link to='#exit'>
+      <Link to='#exit' onClick={() => window.close()}>
         <Inline src={exit} />
       </Link>
     </HeaderContainer>

@@ -17,9 +17,9 @@ export const Search = styled.header`
   justify-content: space-between;
   h1{
     font-family: Nunito, sans-serif;
-    color: #9CA6CA;
+    color: #F1F1F1;
   }
-  div{
+  form{
     width: 100%;
     max-width: 400px;
     height: 40px;
@@ -38,9 +38,10 @@ export const Search = styled.header`
     input{
       width: 100%;
       height: 100%;
-      background: #FFF;
+      background: #232228;
       border: 2px solid transparent;
       outline: none;
+      color: #F1F1F1;
       padding: 0px 40px;
       font-family: Inter, sans-serif;
       border-radius: 10px;
