@@ -25,7 +25,8 @@ export const LastNewsContainer = styled.article`
   }
   article{
     display: grid;
-    grid-template-columns: repeat( auto-fill, min(100%, 470px) );
+    grid-template-columns: repeat(auto-fill, min(100%, 470px));
+    justify-content: center;
     grid-gap: 10px;
     >div{
       padding: 20px;
@@ -70,6 +71,8 @@ export const LastNewsContainer = styled.article`
         font-family: Inter, sans-serif;
         background: #232228;
         li:first-child{
+           width: 100%;
+            height: 100%;
           :focus, :hover{
             a{
               color: #20bfa9;
@@ -144,9 +147,9 @@ export const ViewCard = styled.main`
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     border-bottom: 0px solid #DFDDD4;
-    padding-bottom: 10px;
+    padding: 10px;
     svg{
       width: 35px;
       margin-right: 25px;

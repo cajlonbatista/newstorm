@@ -7,10 +7,10 @@ import Inline from 'svg-inline-react';
 
 import { BarContainer } from './styles';
 
-import logo from '../../assets/svgs/logo';
-import minimize from '../../assets/svgs/minimize';
-import maximize from '../../assets/svgs/maximize';
-import close from '../../assets/svgs/close';
+import logo from '../../assets/svg/logo';
+import minimize from '../../assets/svg/minimize';
+import maximize from '../../assets/svg/maximize';
+import close from '../../assets/svg/close';
 
 const menu = [
   {

@@ -30,3 +30,12 @@ export const jello = keyframes`
     transform: scale3d(1, 1, 1);
   }
 `;
+
+export const trans = keyframes`
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+`;

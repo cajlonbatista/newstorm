@@ -20,19 +20,19 @@ export const BarContainer = styled.div`
       align-items: center;
     }
     svg{
-      width: 18px;
-      height: 18px;
+      width: 16px;
+      height: 16px;
     }
   }
   article{
     -webkit-app-region: drag;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     font-family: Inter, sans-serif;
     width: 100%;
     span{
-      font-size: 14px;
+      font-size: 13px;
       color: #626470;
     }
   }
@@ -68,7 +68,7 @@ export const BarContainer = styled.div`
       justify-content: center;
       align-items: center;
       svg{
-        width: 12px;
+        width: 10px;
       }
     }
   }

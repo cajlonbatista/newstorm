@@ -17,7 +17,7 @@ function createWindow() {
     title: 'Storm Panel',
     frame: false,
     webPreferences: {
-      devTools: false,
+      devTools: true,
       nodeIntegration: true,
       enableRemoteModule: true,
     },
@@ -25,7 +25,21 @@ function createWindow() {
   });
   mainWindow.menuBarVisible = false;
   mainWindow.hide();
-  splash = new BrowserWindow({ width: 300, height: 280, frame: false, transparent: true, resizable: false, center: true, alwaysOnTop: true });
+  splash = new BrowserWindow({
+    width: 300,
+    height: 280,
+    frame: false,
+    transparent: true,
+    resizable: false,
+    center: true,
+    alwaysOnTop: true,
+    icon: path.join(__dirname, 'favicon.ico'),
+    webPreferences: {
+      devTools: true,
+      nodeIntegration: true,
+      enableRemoteModule: true,
+    },
+  });
   splash.loadURL(`file://${__dirname}/splash.html`);
   mainWindow.loadURL(isDev ? 'http://localhost:3000' : `file://${path.join(__dirname, '../build/index.html')}`);
   setTimeout(() => {

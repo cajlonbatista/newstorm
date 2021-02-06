@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { trans } from '../../global/animations/animations';
 
 export const MainContainer = styled.main`
   width: 100%;
@@ -11,6 +12,7 @@ export const MainContainer = styled.main`
   -webkit-user-select: none;
   -webkit-app-region: no-drag;
   -webkit-user-drag: none;
+  animation: ${trans} 0.4s backwards;
 `;
 
 export const Search = styled.header`

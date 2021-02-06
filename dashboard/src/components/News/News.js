@@ -13,9 +13,9 @@ import ViewError from '../ViewError/ViewError';
 import { LastNewsContainer, ViewCard } from './styles';
 import '@szhsin/react-menu/dist/index.css';
 
-import { moreNow } from '../../assets/svgs/more';
-import destroy from '../../assets/svgs/delete';
-import edit from '../../assets/svgs/edit';
+import { moreNow } from '../../assets/svg/more';
+import destroy from '../../assets/svg/delete';
+import edit from '../../assets/svg/edit';
 
 
 const News = ({ article }) => {
@@ -72,11 +72,11 @@ const News = ({ article }) => {
                       <Link to={`/edit/${article._id}`}>
                         <Inline src={edit} />
                         Edit
-                        </Link>
+                      </Link>
                     </MenuItem >
                     <MenuItem onClick={onDeleteDialog}>
-                        <Inline src={destroy} />
-                        Delete
+                      <Inline src={destroy} />
+                      Delete
                     </MenuItem>
                   </Menu>
                   <article style={{ background: `url(${article.cap})` }}></article>
@@ -102,13 +102,11 @@ const News = ({ article }) => {
                       <Link to={`/edit/${article._id}`}>
                         <Inline src={edit} />
                         Edit
-                        </Link>
+                      </Link>
                     </MenuItem >
                     <MenuItem onClick={onDeleteDialog}>
-                      <Link to={`/edit/${article._id}`}>
-                        <Inline src={destroy} />
-                        Delete
-                      </Link>
+                      <Inline src={destroy} />
+                      Delete
                     </MenuItem>
                   </Menu>
                   <article style={{ background: `url(${article.cap})` }}></article>
@@ -138,7 +136,7 @@ const News = ({ article }) => {
                       <Link to={`/edit/${article._id}`}>
                         <Inline src={edit} />
                         Edit
-                        </Link>
+                      </Link>
                     </MenuItem >
                     <MenuItem onClick={onDeleteDialog}>
                         <Inline src={destroy} />
@@ -168,7 +166,7 @@ const News = ({ article }) => {
                       <Link to={`/edit/${article._id}`}>
                         <Inline src={edit} />
                         Edit
-                        </Link>
+                      </Link>
                     </MenuItem >
                     <MenuItem onClick={onDeleteDialog}>
                         <Inline src={destroy} />

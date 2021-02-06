@@ -5,10 +5,9 @@ import Inline from 'svg-inline-react';
 
 import { HeaderContainer } from './styles';
 
-import { homeActive, homeInative } from '../../assets/svgs/home.js';
-import { addActive, addInative } from '../../assets/svgs/add.js';
-import logo from '../../assets/svgs/logo.js';
-import exit from '../../assets/svgs/exit';
+import { homeActive, homeInative } from '../../assets/svg/home.js';
+import { addActive, addInative } from '../../assets/svg/add.js';
+import exit from '../../assets/svg/exit';
 
 const menu = [
   {

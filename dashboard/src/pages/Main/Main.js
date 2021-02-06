@@ -8,7 +8,7 @@ import News from '../../components/News/News';
 
 import { MainContainer, Search } from './styles';
 
-import searchicon from '../../assets/svgs/search';
+import searchicon from '../../assets/svg/search';
 import ViewError from '../../components/ViewError/ViewError';
 
 const Main = () => {
