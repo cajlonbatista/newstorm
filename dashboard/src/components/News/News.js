@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import useSWR from 'swr';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 import Inline from 'svg-inline-react';
 import { CircleLoading } from 'react-loadingg';
@@ -68,15 +69,17 @@ const News = ({ article }) => {
                   <h1>{article.title}</h1>
                   <Menu align='center' menuButton={<MenuButton><Inline src={moreNow} /></MenuButton>}>
                     <MenuItem>
-                      <Inline src={edit} />
-                    Edit
-                  </MenuItem>
+                      <Link to={`/edit/${article._id}`}>
+                        <Inline src={edit} />
+                        Edit
+                        </Link>
+                    </MenuItem >
                     <MenuItem onClick={onDeleteDialog}>
-                      <Inline src={destroy} />
-                    Delete
-                  </MenuItem>
+                        <Inline src={destroy} />
+                        Delete
+                    </MenuItem>
                   </Menu>
-                  <article style={{ background: `url(${article.cap})`}}></article>
+                  <article style={{ background: `url(${article.cap})` }}></article>
                   <Dialog open={anchorDelete} fullScreen={fullScreen} onClose={offDeleteDialog} style={{ borderRadius: 10 }}>
                     <ViewCard>
                       <header>
@@ -95,14 +98,18 @@ const News = ({ article }) => {
                   <span>{new Date(article.created).toLocaleDateString()}</span>
                   <h1>{article.title}</h1>
                   <Menu align='center' menuButton={<MenuButton><Inline src={moreNow} /></MenuButton>}>
-                    <MenuItem onClick={onDeleteDialog}>
-                      <Inline src={edit} />
-                    Edit
-                  </MenuItem>
                     <MenuItem>
-                      <Inline src={destroy} onClick={onDeleteDialog} />
-                    Delete
-                  </MenuItem>
+                      <Link to={`/edit/${article._id}`}>
+                        <Inline src={edit} />
+                        Edit
+                        </Link>
+                    </MenuItem >
+                    <MenuItem onClick={onDeleteDialog}>
+                      <Link to={`/edit/${article._id}`}>
+                        <Inline src={destroy} />
+                        Delete
+                      </Link>
+                    </MenuItem>
                   </Menu>
                   <article style={{ background: `url(${article.cap})` }}></article>
                   <Dialog open={anchorDelete} fullScreen={fullScreen} onClose={offDeleteDialog} style={{ borderRadius: 10 }}>
@@ -128,13 +135,15 @@ const News = ({ article }) => {
                   <h1 style={{ color: '#FFF' }}>{article.title}</h1>
                   <Menu align='center' menuButton={<MenuButton><Inline src={moreNow} /></MenuButton>}>
                     <MenuItem>
-                      <Inline src={edit} />
-                    Edit
-                  </MenuItem>
+                      <Link to={`/edit/${article._id}`}>
+                        <Inline src={edit} />
+                        Edit
+                        </Link>
+                    </MenuItem >
                     <MenuItem onClick={onDeleteDialog}>
-                      <Inline src={destroy} />
-                    Delete
-                  </MenuItem>
+                        <Inline src={destroy} />
+                        Delete
+                    </MenuItem>
                   </Menu>
                   <article style={{ background: `url(${article.cap})` }}></article>
                   <Dialog open={anchorDelete} fullScreen={fullScreen} onClose={offDeleteDialog} style={{ borderRadius: 10 }}>
@@ -156,13 +165,15 @@ const News = ({ article }) => {
                   <h1>{article.title}</h1>
                   <Menu align='center' menuButton={<MenuButton><Inline src={moreNow} /></MenuButton>}>
                     <MenuItem>
-                      <Inline src={edit} />
-                    Edit
-                  </MenuItem >
+                      <Link to={`/edit/${article._id}`}>
+                        <Inline src={edit} />
+                        Edit
+                        </Link>
+                    </MenuItem >
                     <MenuItem onClick={onDeleteDialog}>
-                      <Inline src={destroy} />
-                    Delete
-                  </MenuItem>
+                        <Inline src={destroy} />
+                        Delete
+                    </MenuItem>
                   </Menu>
                   <article style={{ background: `url(${article.cap})` }}></article>
                   <Dialog open={anchorDelete} fullScreen={fullScreen} onClose={offDeleteDialog} style={{ borderRadius: 10 }}>

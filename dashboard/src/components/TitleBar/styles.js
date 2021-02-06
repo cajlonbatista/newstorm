@@ -8,8 +8,8 @@ export const BarContainer = styled.div`
   height: 35px;
   -webkit-user-select: none;
   background: #171717;
+  -webkit-app-region: drag;
   >div:first-child{
-    -webkit-app-region: drag;
     padding: 5px 10px;
     i{
       width: 100%;
@@ -39,9 +39,11 @@ export const BarContainer = styled.div`
   >div:last-child{
     width: 140px;
     height: 100%;
+    -webkit-app-region: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 999;
     div{
       width: 100%;
       height: 100%;

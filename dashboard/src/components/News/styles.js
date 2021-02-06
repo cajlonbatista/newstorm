@@ -69,6 +69,22 @@ export const LastNewsContainer = styled.article`
       ul{
         font-family: Inter, sans-serif;
         background: #232228;
+        li:first-child{
+          :focus, :hover{
+            a{
+              color: #20bfa9;
+            }
+            svg{
+              stroke: #20bfa9;
+            }
+          }
+          a{
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            color: #B8B7B9;
+          }
+        }
         li{
           font-size: 13.4px;
           transition: all 0.3s;
